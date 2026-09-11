@@ -5,7 +5,7 @@ spring:
   application:
     name: employee-service
   datasource:
-    url: jdbc:mysql://mysql-db:3306/doctor_pet?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://mysql-db:3306/doctor_pet?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
