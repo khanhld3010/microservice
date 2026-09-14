@@ -27,4 +27,9 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.cloud.loadbalancer: DEBUG
