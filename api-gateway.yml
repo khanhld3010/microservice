@@ -6,6 +6,17 @@ spring:
     name: api-gateway
   cloud:
     gateway:
+      server:
+        webflux:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
+          routes:
+            - id: employee-service
+              uri: lb://employee-service
+              predicates:
+                - Path=/api/employees/**
       discovery:
         locator:
           enabled: true
